@@ -1,8 +1,7 @@
 FROM alpine:latest
 
 RUN apk update \
-  && apk del python \
-  && apk add python3 bash \
+  && apk add python3 \
   && rm -rf /var/cache/apk/*
 
 RUN python3 -m ensurepip \
