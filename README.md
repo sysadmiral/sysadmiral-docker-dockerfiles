@@ -2,9 +2,27 @@
 
 ## per dockerfile instructions
 
+- [python3](#python3)
+  - [Description](#description)
+  - [Usage](#usage)
 - [saws](#saws)
   - [Description](#description)
   - [Usage](#usage)
+
+### python3
+
+#### Description
+
+This is a small container based on `alpine:latest` that installs `python3` from 
+the official apk repositories.
+
+It then install `pip` and `setupttools` and updates them to the latest version.
+
+#### Usage
+
+```shell
+docker pull sysadmiral/python3
+```
 
 ### saws
 
