@@ -1,11 +1,11 @@
 # A container for Python3
 
-FROM alpine:latest
+FROM alpine:3.4
 MAINTAINER Amo Chumber <root.demon.net@gmail.com>
 
-RUN apk update \
-  && apk add python3 \
-  && rm -rf /var/cache/apk/*
-
-RUN python3 -m ensurepip \
+RUN apk add --no-cache \
+  python3 \
+  && python3 -m ensurepip \
   && python3 -m pip install --upgrade pip setuptools
+
+ENTRYPOINT ["python3"]
