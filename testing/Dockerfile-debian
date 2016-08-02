@@ -1,0 +1,15 @@
+FROM debian:jessie
+MAINTAINER WebOps <webops@connect-group.com>
+
+RUN set -ex \
+  && apt-get update  \
+  && apt-get install --assume-yes curl \
+  && curl -sL https://deb.nodesource.com/setup_4.x | bash - \
+  && apt-get update \
+  && apt-get install --assume-yes nodejs build-essential ruby apt-file \
+  && gem install bundler \
+  && npm install --global gulp-cli \
+  && apt-get clean \
+  && apt-file purge
+
+ENTRYPOINT ["/bin/sh"]

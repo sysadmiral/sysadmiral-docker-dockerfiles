@@ -10,4 +10,4 @@ RUN set -ex \
   && npm install --global gulp-cli \
   && yum clean all
 
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["/bin/bash"]
